@@ -1,0 +1,48 @@
+body{
+    background-color: antiquewhite;
+}
+
+.grid {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+    border: solid black 2px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.mole {
+    background-image: url('mole.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+}
+
+
+h2{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;  
+}
+
+h3{
+    text-align: center;
+    font-size: 50px;
+    font-family:'Courier New', Courier, monospace;
+}
