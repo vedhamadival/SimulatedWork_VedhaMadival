@@ -1,5 +1,14 @@
-body{
-    background-color: antiquewhite;
+body {
+    background: linear-gradient(to bottom, #f3e7d9, #f5d0b5);
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .grid {
@@ -9,22 +18,26 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    top: 5%;
 }
 
 .square {
     height: 100px;
     width: 100px;
-    border: solid black 2px;
+    border: 2px solid #333;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
+    background-color: #fff5eb;
+    border-radius: 5px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.square:hover {
+    background-color: #ffefd5;
+    transform: scale(1.05);
 }
 
 .mole {
@@ -33,16 +46,16 @@ body{
     background-position: center;
     width: 100px;
     height: 100px;
+    border-radius: 5px;
 }
 
-
-h2{
+h2, h3 {
     text-align: center;
-    font-family:'Courier New', Courier, monospace;  
+    margin: 10px;
+    color: #333;
 }
 
-h3{
-    text-align: center;
-    font-size: 50px;
-    font-family:'Courier New', Courier, monospace;
+#score, #time-left {
+    color: #f04a24;
+    font-size: 30px;
 }

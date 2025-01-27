@@ -1,36 +1,114 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
 
-#div1{
-    text-align: center;
-    margin-top: 200px;
-    padding: 15px;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
 }
 
-#div2{
+#container {
+    width: 80%;
+    max-width: 700px;
+    border: solid black 4px;
+    border-radius: 2%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#div1, #div2, #div3 {
     text-align: center;
-    margin-top: 15px;
-    padding: 10px;
+    flex: 1;
+}
+
+#div1 {
+    text-align: center;
+    padding: 20px;
+    height: 150px;
+    width: auto;
+    border: solid 2px;
+    margin-right: 50px;
+}
+
+
+#div2 {
+    text-align: center;
+    padding: 20px;
+    height: 150px;
+    width: auto;
+    border: solid 2px;
+    margin-right: 50px;
+
+}
+
+#div3 {
+    text-align: center;
+    padding: 20px;
+    height: 150px;
+    width: auto;
+    border: solid 2px;
+    /* margin-right: 20px; */
+
 }
 
 button {
     padding: 10px 20px;
     margin: 10px;
-    font-size: 25px;
-    background-color: #007bff;
+    font-size: 18px;
+    background-color: #cbe4ff;
     color: #ffffff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
-
 
 button:hover {
     background-color: #0056b3;
 }
 
+div > button {
+    display: inline-block;
+}
 
+#reset {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+}
+
+#reset:hover {
+    background-color: #218838;
+}
+
+/* bounce Effect */
+button:active { 
+    transform: scale(1.1);
+}
+
+.emoji {
+    font-size: 3rem;
+}
+
+#rock , #paper , #scissor {
+    font-size: 2.5rem;
+}

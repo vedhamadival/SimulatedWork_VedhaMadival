@@ -15,6 +15,23 @@ const CardArray = [
 
 CardArray.sort(() => 0.5 - Math.random());
 
+let timerDisplay = null;
+let timer = 0;
+let timerInterval = null;
+
+function startTimer() {
+    timer = 0;
+    timerDisplay.textContent = `Time: ${timer} seconds`;
+    timerInterval = setInterval(() => {
+        timer++;
+        timerDisplay.textContent = `Time: ${timer} seconds`;
+    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timerInterval);
+}
+
 const gridDisplay = document.querySelector('#grid');
 const resultDisplay = document.querySelector('#result');
 let cardsChosen = [];
@@ -22,6 +39,11 @@ let cardsChosenId = [];
 let cardsWon = [];
 
 function createBoard() {
+    timerDisplay = document.createElement('h2');
+    timerDisplay.id = 'timer';
+    timerDisplay.textContent = 'Time: 0 seconds';
+    document.body.insertBefore(timerDisplay, gridDisplay);
+    startTimer();
    for (let i = 0; i < CardArray.length; i++) {
        const card = document.createElement('img');
        card.setAttribute('src', 'images/blank.png');

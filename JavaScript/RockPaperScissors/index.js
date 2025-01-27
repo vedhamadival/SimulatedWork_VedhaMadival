@@ -12,9 +12,14 @@ let computerChoice;
 let result;
 let score = 0;
 
-rockbtn.addEventListener("click", () => handleUserChoice("Rock"));
-paperbtn.addEventListener("click", () => handleUserChoice("Paper"));
-scissorbtn.addEventListener("click", () => handleUserChoice("Scissor"));
+// Emojis for the game
+const ROCK_EMOJI = "✊";
+const PAPER_EMOJI = "✋";
+const SCISSOR_EMOJI = "✌️";
+
+rockbtn.addEventListener("click", () => handleUserChoice(ROCK_EMOJI));
+paperbtn.addEventListener("click", () => handleUserChoice(PAPER_EMOJI));
+scissorbtn.addEventListener("click", () => handleUserChoice(SCISSOR_EMOJI));
 
 playAgainbtn.addEventListener("click", () => {
   playAgain();
@@ -31,13 +36,13 @@ function generateComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3);
   switch (randomNumber) {
     case 0:
-      computerChoice = "Rock";
+      computerChoice = ROCK_EMOJI;
       break;
     case 1:
-      computerChoice = "Paper";
+      computerChoice = PAPER_EMOJI;
       break;
     case 2:
-      computerChoice = "Scissor";
+      computerChoice = SCISSOR_EMOJI;
       break;
   }
   computerChoiceDisplay.innerText = computerChoice;
@@ -45,11 +50,11 @@ function generateComputerChoice() {
 
 function getResult() {
   if (computerChoice === userChoice) {
-    result = "Its a draw!";
+    result = "It's a draw!";
   } else if (
-    (computerChoice === "Rock" && userChoice === "Scissor") ||
-    (computerChoice === "Scissor" && userChoice === "Paper") ||
-    (computerChoice === "Paper" && userChoice === "Rock")
+    (computerChoice === ROCK_EMOJI && userChoice === SCISSOR_EMOJI) ||
+    (computerChoice === SCISSOR_EMOJI && userChoice === PAPER_EMOJI) ||
+    (computerChoice === PAPER_EMOJI && userChoice === ROCK_EMOJI)
   ) {
     result = "You lost!";
   } else {
@@ -64,7 +69,7 @@ function playAgain() {
   console.log("Play again clicked");
   score = 0;
   scoreDisplay.innerText = score;
-  computerChoiceDisplay.innerText= "";
+  computerChoiceDisplay.innerText = "";
   userChoiceDisplay.innerText = "";
-  resultDisplay.inn = "";
+  resultDisplay.innerText = "";
 }
