@@ -7,6 +7,7 @@ const logsRight = document.querySelectorAll('.log-right')
 const carsLeft = document.querySelectorAll('.car-left')
 const carsRight = document.querySelectorAll('.car-right')
 
+let gameStarted = false
 let currentIndex = 76
 let width = 9
 let timerId
@@ -15,6 +16,7 @@ let currentTime = 20
 
 
 function moveFrog(e) {
+    if(!gameStarted) return;
     squares[currentIndex].classList.remove('frog')
     switch(e.key){
         case 'ArrowLeft':
@@ -164,10 +166,12 @@ startPauseButton.addEventListener('click', () => {
         clearInterval(outcomeTimerId)
         outcomeTimerId = null
         timerId = null
+        gameStarted = false
         document.removeEventListener('keyup', moveFrog)
     } else {
         timerId = setInterval(autoMoveElements, 1000)
         outcomeTimerId = setInterval(checkOutComes, 50)
         document.addEventListener('keyup', moveFrog)
+        gameStarted = true
     }
 })

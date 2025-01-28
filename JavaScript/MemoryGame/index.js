@@ -34,6 +34,7 @@ function stopTimer() {
 
 const gridDisplay = document.querySelector('#grid');
 const resultDisplay = document.querySelector('#result');
+const playAgainbtn = document.querySelector('#play-again-btn');
 let cardsChosen = [];
 let cardsChosenId = [];
 let cardsWon = [];
@@ -96,4 +97,11 @@ function checkForMatch() {
    }
 }
 
+function playAgain () {
+    window.location.reload();
+}
+
+playAgainbtn.addEventListener('click' , ()=>{
+    playAgain();
+})
 createBoard();

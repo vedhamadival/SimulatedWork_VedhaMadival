@@ -1,6 +1,7 @@
 const score = document.querySelector("#score");
 const timeLeft = document.querySelector("#time-left");
 const squares = document.querySelectorAll(".square");
+const playAgainbtn = document.querySelector('#play-again-btn');
 let result = 0;
 let hitPosition;
 let currentTime = 60;
@@ -41,5 +42,13 @@ function countDown() {
     }
 }
 
+function playAgain () {
+    window.location.reload();
+}
+
 let countDownTimerId = setInterval(countDown, 1000);
 MoveMole();
+
+playAgainbtn.addEventListener('click' , ()=>{
+    playAgain();
+})
