@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Connect Four</title>
     <link rel="stylesheet" href="index.css" />
-    <script src="index.js" charset="utf-8"></script>
+    <script defer src="index.js"></script>
   </head>
   <body>
     <h3>The current Player is: Player <span id="current-player">1</span></h3>
     <h3 id="result"></h3>
 
     <div class="grid">
+      <div></div>
       <div></div>
       <div></div>
       <div></div>
@@ -62,5 +62,7 @@
       <div class="taken"></div>
       <div class="taken"></div>
     </div>
+
+    <button id="playagain">Play Again</button>
   </body>
 </html>

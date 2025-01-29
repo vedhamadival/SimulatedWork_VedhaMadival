@@ -1,34 +1,50 @@
 body {
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
 
 }
 
 .grid {
-    border: 1px solid;
-    height: 120px;
-    width: 140px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .grid div {
-    height: 20px;
-    width: 20px;
-  }
-  
-  .player-one {
-    background-color: red;
-    border-radius: 10px;
-  }
-  
-  .player-two {
-    background-color: blue;
-    border-radius: 10px;
-  }
-  
+  border: 1px solid;
+  height: 120px;
+  width: 140px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid div {
+  height: 20px;
+  width: 20px;
+}
+
+.player-one {
+  background-color: red;
+  border-radius: 10px;
+}
+
+.player-two {
+  background-color: blue;
+  border-radius: 10px;
+}
+
+#playagain {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #43a047;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#playagain:hover {
+  background-color: #388e3c;
+}
